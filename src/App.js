@@ -1,27 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
+import Books from './components/Books';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
-  const [busca, setBusca] = useState('');
-  const onInputChange = (e) => {
-    setBusca(e.target.value)
-  }
-  return (
-    <div className="App">
-      <section>
-      <form>
-        <label>
-          <span>Google Books API</span>
-          <input
-            type="search"
-            placeholder="Pesquisar por :"
-          />
-          <button type="submit">Search</button>
-        </label>
-      </form>
-    </section>
-    </div>
-  );
+
+const App = () =>{
+  
+    return (
+      <div className="App">
+        <Books />
+      </div>
+    );
+  
 }
 
 export default App;
