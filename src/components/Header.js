@@ -1,19 +1,19 @@
 import React from 'react';
 //import '../styles/Header.css';
-import {Navbar, FormControl, Button, NavDropdown, Form, Nav} from 'react-bootstrap';
+import {Navbar, FormControl, Button, Form, Nav} from 'react-bootstrap';
 
 const Header = (props) => {
     return (
-      <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="#home">React google books api</Navbar.Brand>
+      <Navbar bg="primary" expand="lg">
+        <Navbar.Brand href="#home">Utilizando Google Books API com React JS e Bootstrap               </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           
           <Form inline>
             <FormControl onChange={props.handleSearch}
-                type="text" placeholder="Search" 
+                type="text" placeholder="Pesquisar por :" 
                 className="mr-sm-2" />
-            <Button onClick={props.searchBook} variant="outline-success">Search</Button>
+            <Button onClick={props.searchBook} variant="outline-light">Buscar</Button>
           </Form>
         </Navbar.Collapse>
       </Navbar>

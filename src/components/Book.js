@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import {Modal, Card, Button} from 'react-bootstrap'
+import {Modal, Card, Button} from 'react-bootstrap';
+import { Container, Row, Col, Image } from 'react-bootstrap';
+import '../styles/Header.css';
 
 function Book({ avatar, title, description, publishedDate }) {
   const [openCard, setOpenCard] = useState(false);
@@ -16,43 +18,39 @@ function Book({ avatar, title, description, publishedDate }) {
     }
   };
 
-  return (
-    <div className="Cards">
-      <div>
-        <Modal show={openCard} onHide={updateOpenCard}>
-          <Modal.Body>
-            <Modal.Header closeButton>
-              <Modal.Title>Modal heading</Modal.Title>
-            </Modal.Header>
-            <AvatarBook />
-            <a onClick={updateOpenCard}>{title}</a>
-            <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src={<AvatarBook />} />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-          </Modal.Body>
-        </Modal>
-      </div>
 
-      <Modal show={openCard} onHide={updateOpenCard}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <AvatarBook />
-          <span>{title}</span>
-          <span>{description}</span>
-          <span>{publishedDate}</span>
-        </Modal.Body>
-      </Modal>
-    </div>
+  return (
+    <>
+      <div className="container-sm 6 offset-4">
+        <div className="row-4 row-sm-6 row-md-4">
+          <div className="col-4">{<AvatarBook />}</div>
+        </div>
+        <div className="row-4 row-sm-6 row-md-4">
+          <div className="col-4">{<a onClick={updateOpenCard}>{title}</a>}</div>
+        </div>
+        </div>
+    </>
+
+    // <Container fluid="md">
+    //   <Row>
+    //     <Col sm={4}>
+    //       <AvatarBook />
+    //       <a onClick={updateOpenCard}>{title}</a>
+    //     </Col>
+    //   </Row>
+    // </Container>
+
+    // <Modal show={openCard} onHide={updateOpenCard} autoFocus={true}>
+    //   <Modal.Header closeButton>
+    //     <Modal.Title>Modal heading</Modal.Title>
+    //   </Modal.Header>
+    //   <Modal.Body>
+    //     <AvatarBook />
+    //     <span>{title}</span>
+    //     <span>{description}</span>
+    //     <span>{publishedDate}</span>
+    //   </Modal.Body>
+    // </Modal>
   );
 }
 

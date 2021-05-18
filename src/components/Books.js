@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import _ from 'lodash';
 import request from "superagent";
 
@@ -44,9 +44,6 @@ function Books() {
     setItensPerPage(functionItemsPerPage(evt));
   }
 
-//useEffect(() => {
-//    getBooks();
-//},[currentPage])
 
   function getBooks() {
     const URL = `https://content-books.googleapis.com/books/v1/volumes?q=${searchField}&key=`;
