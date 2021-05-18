@@ -14,6 +14,7 @@ import PaginationItens, {
     functionFirstPage,
     functionItemsPerPage
 } from './PaginationItens';
+import { CardDeck } from "react-bootstrap";
 
 
 function Books() {
@@ -72,6 +73,7 @@ function Books() {
   return (
     <div>
       <Header searchBook={searchBook} handleSearch={handleSearch} />
+      <CardDeck>
       {books.map((book) => (
         <div>
           <Book
@@ -83,6 +85,7 @@ function Books() {
           />
         </div>
       ))}
+      </CardDeck>
       <PaginationItens
         itensPerPage={10}
         total={totalItens}
