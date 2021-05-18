@@ -4,7 +4,7 @@ import {Navbar, FormControl, Button, Form, Nav} from 'react-bootstrap';
 
 const Header = (props) => {
     return (
-      <Navbar bg="primary" expand="lg">
+      <Navbar fixed="top" bg="primary" expand="lg">
         <Navbar.Brand href="#home">Utilizando Google Books API com React JS e Bootstrap</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
