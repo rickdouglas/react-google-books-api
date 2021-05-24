@@ -20,6 +20,8 @@ import { CardDeck } from "react-bootstrap";
 function Books() {
   const [books, setBooks] = useState([]);
   const [searchField, setSearchField] = useState("");
+  
+  
   const INITIAL_currentPage = 1;
   const INITIAL_itensPerPage = 10;
   const [totalItens, setTotalItens] = useState(0);
@@ -52,7 +54,8 @@ function Books() {
       const newData = data.body.items;
       console.log("newData", newData);
       setBooks(newData);
-      setTotalItens(data.body.totalItems);
+      
+      setTotalItens(data.body.totalItems); // usado pra paginação
     });
   }
 

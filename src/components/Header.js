@@ -18,15 +18,6 @@ const Header = (props) => {
         </Navbar.Collapse>
       </Navbar>
 
-
-
-
-
-
-      // <header className="main-header">
-      //     <i className="fas fa-book fa-2x"></i>
-      //     <h1>Testando a pagina</h1>
-      // </header>
     );
 }
 

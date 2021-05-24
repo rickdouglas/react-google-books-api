@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Modal, Card, Button } from "react-bootstrap";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Modal, Card } from "react-bootstrap";
 import _ from 'lodash';
 import "../styles/Book.css";
 import "../styles/Box.css";
@@ -19,7 +18,7 @@ function Book({ avatar, title, description, publishedDate }) {
       return avatar.thumbnail;
     }
   };
-
+// Tentei fazer uma fução que cria um componete retornando o thumbnail do resultado que vem na api
   return (
     <div className="card">
       <Card border="primary" style={{ width: "18rem" }} className="box" >
